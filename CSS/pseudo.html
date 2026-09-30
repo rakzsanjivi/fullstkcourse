@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Selector</title>
+    <style>
+      a:hover {
+        background-color: brown;
+        color: aliceblue;
+      }
+      h1:hover {
+        background-color: burlywood;
+      }
+      button:active {
+        background-color: brown;
+      }
+      input:focus {
+        padding: 10px;
+        border-radius: 10px;
+        border: 4px solid red;
+      }
+      li:nth-child(3) {
+        color: aqua;
+      }
+      li:not(:last-child) {
+        border: 1px solid;
+      }
+      li:not(:last-child) {
+        margin-top: 2px;
+      }
+      li:last-child {
+        border: 1px solid;
+      }
+      input:disabled{
+        background-color:lightsteelblue;
+      }
+      p::first-letter{
+        font-weight: bolder;
+      }
+      p::first-line{
+        font-style:italic;
+        font-size: x-large;
+      }
+      p::before{
+        content:"Note:";
+        color:lightgray;
+      }
+      p::after{
+        content:"End";
+        color:lightslategray;
+        font-weight:600;
+      }
+      ::selection{
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    Pseudo Class
+    <div>
+      <h1>CSS Pseudo Classes</h1>
+      <p>
+        Pseudo-Classes: a:hover: Changes the link color to red when hovered.
+        button:active: Changes the button background color to yellow when it is
+        being clicked. input:focus: Adds a blue border to the input field when
+        it is focused. li:nth-child(2): Changes the color of the second list
+        item to green. li:not(:last-child): Adds a bottom margin to all list
+        items except the last one. input:disabled: Changes the background color
+        of disabled input fields to light grey. Pseudo-Elements: p ::
+        first-line: Makes the first line of the paragraph bold. p :: first
+        letter: Increases the size and changes the color of the first letter of
+        the paragraph. p :: before: Adds "Note: " before the paragraph content.
+        p :: after: Adds "[Read more]" after the paragraph content. ::
+        selection: Changes the background and text color of selected text.
+      </p>
+      <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Foruth Item</li>
+      </ul>
+      <a href="">Hover on the link</a>
+      <br />
+      <button>Click Me</button><br />
+
+      <input type="text" placeholder="Focus on the input box" /><br /><br />
+      <input
+        type="text"
+        placeholder="this is the input disableed"
+        disabled
+      /><br /><br />
+      <p>
+        Select the text from the para: Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Eveniet laborum, odio saepe doloribus fuga omnis ipsum
+        odit illum aliquam temporibus. At, dolor. Iste expedita soluta error
+        iusto ab suscipit necessitatibus.
+      </p>
+    </div>
+  </body>
+</html>
