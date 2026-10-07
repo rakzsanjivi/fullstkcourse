@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Positioning</title>
+    <style>
+        .container{
+            position:relative;
+            border:1px solid black;
+            padding:10px;
+            height:500px;
+            
+
+        }
+        .static_box{
+            position:static;
+            width:100px;
+            height:100px;
+            background-color: aquamarine;
+            margin-bottom: 20px;        }
+            .relativeBox{
+                position:relative;
+                width:100px;
+                height:100px;
+                background-color: lightsalmon;
+                margin-bottom: 20px;
+                left:100px;
+                top:40px;
+            }
+            .absoluteBox{
+                position:absolute;
+                height:100px;
+                width:100px;
+                left:50px;
+                top:64px;
+                background-color: lightgreen;
+            }
+            .fixedbox{
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                width: 100px;
+                height: 100px;
+                background-color: lightslategray;
+            }
+            .stickybox{
+                position: -webkit-sticky;
+                position:sticky;
+                top:0;
+                width:100%;
+                display: block;
+                background-color: lightskyblue;
+                padding:10px;
+            }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="static_box">Static</div>
+        <div class="relativeBox">RelativeBox</div>
+        <div class="absoluteBox">absoluteBox</div>
+        <div class="stickyBox">stickyBox</div>
+    </div>
+    <div class="fixedbox">fixed
+
+    </div>
+    <hr>
+    
+    <div><h2>Static : the Element is postioned accordint to the normal flow of the document </h2></div><hr><br><br>
+    <div class="stickybox">Stickyheadedr</div>
+    <div><h2>Relative: The element is postioned relative to its normal position. Setting the top, right, bottom and left properties will cause it to be adjusted away from its normal position. </h2></div><hr><br><br>
+    <div><h2>absolute: Completely removed from page flow; positions itself relative to its nearest positioned ancestor and moves with page scrolling.</h2></div><hr><br><br>
+    <div><h2>fixed: Completely removed from page flow; locks itself relative to the browser viewport and never moves during scrolling.</h2></div><hr><br><br>
+    <div><h2>sticky: Sits normally in the layout flow until scrolled to a specific threshold, where it pins itself until its parent container ends.</h2></div><hr><br><br>
+</body>
+</html>
